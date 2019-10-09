@@ -22,10 +22,13 @@ function mapStateToProps(state) {
   };
 }
 
-const mapDispatchToProps = (dispatch) => {
+function mapDispatchToProps(dispatch) {
   return {
-    actions: bindActionCreators(userActions, dispatch),
+    dispatch,
+    actions: {
+      ...bindActionCreators(bindActionCreators, dispatch),
+    }
   };
-};
+}
 
 export default connect(mapStateToProps, mapDispatchToProps)(Home);
