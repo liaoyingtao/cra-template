@@ -1,7 +1,6 @@
 {
   "name": "cra-template",
   "version": "0.1.0",
-  "private": true,
   "dependencies": {
     "amfe-flexible": "^2.2.1",
     "antd-mobile": "^2.3.1",
