@@ -2,7 +2,7 @@ import axios from 'axios';
 const qs = require('querystring');
 // import Cookies from 'js-cookie';
 
-const BASE_URL = 'http://198.44.48.146/vehicle/public';
+const BASE_URL = '';
 
 class CallAPI {
 	getOption = (api, params = {}) => {
