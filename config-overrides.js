@@ -4,9 +4,11 @@ const {
   addWebpackAlias,
   addDecoratorsLegacy,
   fixBabelImports,
-  addLessLoader
+  addLessLoader,
+  addPostcssPlugins
 } = require("customize-cra");
 const path = require('path');
+const px2rem = require("postcss-px2rem");
 
 module.exports = override(
   addDecoratorsLegacy(),
@@ -37,4 +39,5 @@ module.exports = override(
     ["@/actions"]: path.resolve(__dirname, "src/actions"),
     ["@/reducers"]: path.resolve(__dirname, "src/reducers"),
   }),
+  addPostcssPlugins([(px2rem)({ remUnit: 37.5 })])
 );
